@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -30,7 +34,7 @@
                         <p class="card-text">ADTs, Data Structures, and Problem Solving with C++ | 2nd Edition</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/ADTs, Data Structures, and Problem Solving with C++.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -43,7 +47,7 @@
                         <p class="card-text">Designing the User Interface: Strategies for Effective Human-Computer Interaction | 6th Edition</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/Designing the User Interface - Strategies for Effective Human-Computer Interaction.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -56,7 +60,7 @@
                         <p class="card-text">Operating System Concepts | 9th Edition</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/Operating System Concepts 9th Edition.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -69,7 +73,7 @@
                         <p class="card-text">Software Engineering Design | Theory and Practice</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/Software_Engineering_Design_Theory_and_Practice.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -82,7 +86,7 @@
                         <p class="card-text">IEEE | 29418: Software Engineering Requirements</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/29148.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -95,7 +99,7 @@
                         <p class="card-text">IEEE | Standard Glossary of Software Engineering Terminology</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/IEEE_SoftwareEngGlossary.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -108,7 +112,7 @@
                         <p class="card-text">Four Techniques for Defining Project Scope</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/Project Scope.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -121,7 +125,7 @@
                         <p class="card-text">MITRE | Software Engineering Guide</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/Software Engineering Guide.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
@@ -131,10 +135,10 @@
                     <div class="card mb-4 box-shadow">
                       <img class="card-img-top" src="./images/9.PNG">
                       <div class="card-body">
-                        <p class="card-text"></p>
+                        <p class="card-text">Software Engineering Book of Knowledge | Version 3.0</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                          <a href="./books/SWEBOK.pdf"><button type="button" class="btn btn-sm btn-outline-secondary">Read</button></a>
                           </div>
                         </div>
                       </div>
