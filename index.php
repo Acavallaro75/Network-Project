@@ -80,18 +80,16 @@ if (isset($_POST['submit'])) {
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">First name
-                            <input type="text" class="form-control" name="first_name" required>
-                        </label>
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" name="first_name" required>
                         <div class="invalid-feedback">
                             Valid first name is required.
                         </div>
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <label for="lastName">Last name
-                            <input type="text" class="form-control" name="last_name" required>
-                        </label>
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" name="last_name" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -104,9 +102,7 @@ if (isset($_POST['submit'])) {
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
-                        <label>
-                            <input type="text" class="form-control" name="username" placeholder="username" required>
-                        </label>
+                        <input type="text" class="form-control" name="username" placeholder="username" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Your username is required.
                         </div>
@@ -114,104 +110,98 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="mb-3">
-                    <label for="email">Email <span class="text-muted"></span>
-                        <input type="text" class="form-control" name="email" placeholder="you@example.com" required>
-                    </label>
+                    <label for="email">Email <span class="text-muted"></span></label>
+                    <input type="text" class="form-control" name="email" placeholder="you@example.com" required>
                     <div class="invalid-feedback">
                         Please enter a valid email address.
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="address">Address
-                        <input type="text" class="form-control" name="address" placeholder="1234 Main St" required>
-                    </label>
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" name="address" placeholder="1234 Main St" required>
                     <div class="invalid-feedback">
                         Please enter your shipping address.
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="address2">Address 2 <span class="text-muted">(Optional)</span>
-                        <input type="text" class="form-control" name="address_two" placeholder="Apartment or suite">
-                    </label>
+                    <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" name="address_two" placeholder="Apartment or suite">
                 </div>
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="city">City
-                            <input type="text" class="form-control" name="city" required>
-                        </label>
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" name="city" required>
                         <div class="invalid-feedback">
                             Valid city is required.
                         </div>
                     </div>
 
                     <div class="col-md-4 mb-3">
-                        <label for="state">State
-                            <select name="state" class="custom-select d-block w-100" required>
-                                <option value="state">Choose...</option>
-                                <option value="Alabama">Alabama</option>
-                                <option value="Alaska">Alaska</option>
-                                <option value="Arizona">Arizona</option>
-                                <option value="Arkansas">Arkansas</option>
-                                <option value="California">California</option>
-                                <option value="Colorado">Colorado</option>
-                                <option value="Connecticut">Connecticut</option>
-                                <option value="Delaware">Delaware</option>
-                                <option value="Florida">Florida</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Hawaii">Hawaii</option>
-                                <option value="Idaho">Idaho</option>
-                                <option value="Illinois">Illinois</option>
-                                <option value="Indiana">Indiana</option>
-                                <option value="Iowa">Iowa</option>
-                                <option value="Kansas">Kansas</option>
-                                <option value="Kentucky">Kentucky</option>
-                                <option value="Louisiana">Louisiana</option>
-                                <option value="Maine">Maine</option>
-                                <option value="Maryland">Maryland</option>
-                                <option value="Massachusetts">Massachusetts</option>
-                                <option value="Michigan">Michigan</option>
-                                <option value="Minnesota">Minnesota</option>
-                                <option value="Mississippi">Mississippi</option>
-                                <option value="Missouri">Missouri</option>
-                                <option value="Montana">Montana</option>
-                                <option value="Nebraska">Nebraska</option>
-                                <option value="Nevada">Nevada</option>
-                                <option value="New Hampshire">New Hampshire</option>
-                                <option value="New Jersey">New Jersey</option>
-                                <option value="New Mexico">New Mexico</option>
-                                <option value="New York">New York</option>
-                                <option value="North Carolina">North Carolina</option>
-                                <option value="North Dakota">North Dakota</option>
-                                <option value="Ohio">Ohio</option>
-                                <option value="Oklahoma">Oklahoma</option>
-                                <option value="Oregon">Oregon</option>
-                                <option value="Pennsylvania">Pennsylvania</option>
-                                <option value="Rhode Island">Rhode Island</option>
-                                <option value="South Carolina">South Carolina</option>
-                                <option value="South Dakota">South Dakota</option>
-                                <option value="Tennessee">Tennessee</option>
-                                <option value="Texas">Texas</option>
-                                <option value="Utah">Utah</option>
-                                <option value="Vermont">Vermont</option>
-                                <option value="Virginia">Virginia</option>
-                                <option value="Washington">Washington</option>
-                                <option value="West Virginia">West Virginia</option>
-                                <option value="Wisconsin">Wisconsin</option>
-                                <option value="Wyoming">Wyoming</option>
-                            </select>
-                        </label>
+                        <label for="state">State</label>
+                        <select name="state" class="custom-select d-block w-100" required>
+                            <option value="state">Choose...</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
                         <div class="invalid-feedback">
                             Please provide a valid state.
                         </div>
                     </div>
 
                     <div class="col-md-3 mb-3">
-                        <label for="zip">Zip
-                            <input type="text" class="form-control" name="zip" required>
-                        </label>
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" name="zip" required>
                         <div class="invalid-feedback">
                             Zip code required.
                         </div>
@@ -275,9 +265,8 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <label for="cc-expiration">CVV
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="">
-                        </label>
+                        <label for="cc-expiration">CVV</label>
+                        <input type="text" class="form-control" id="cc-cvv" placeholder="">
                         <div class="invalid-feedback">
                             Security code required
                         </div>
@@ -294,7 +283,6 @@ if (isset($_POST['submit'])) {
     <p class="mb-1">&copy; 2020 - PDF Library</p>
 </footer>
 
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script><-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-</html>
