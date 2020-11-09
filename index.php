@@ -63,7 +63,6 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="./core.css">
     <title>Sign Up</title>
 </head>
-<body>
 
 <body class="bg-light">
 
