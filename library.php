@@ -160,6 +160,36 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="./images/10.PNG" alt="Introduction to Algorithms">
+                    <div class="card-body">
+                        <p class="card-text">Introduction to Algorithms | 3rd Edition</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="./books/Introduction To Algorithms 3rd Edition.pdf">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="./images/11.PNG" alt="Software Security Glossary">
+                    <div class="card-body">
+                        <p class="card-text">Software Security Glossary</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="./books/Software Security Glossary.pdf">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Read</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
