@@ -1,69 +1,60 @@
 <?PHP
 
-// include('config/db_connect.php');
+$server = "localhost";
+$username = "andrew";
+$password = "networkproject";
+$database = "users";
 
-$first_name = '';
-$last_name = '';
-$username = '';
-$email = '';
-$address = '';
-$address_two = '';
-$city = '';
-$state = '';
-$zip = '';
+$connection = mysqli_connect($server, $username, $password, $database);
 
-$sql = 'INSERT INTO ACCOUNTS (FIRST_NAME, LAST_NAME, USERNAME, ADDRESS, CITY, STATE, ZIP, EMAIL) VALUES ($first_name, $last_name,
-$username, $email, $address, $city, $state, $zip)';
-
-$sqlTwo = 'INSERT INTO ACCOUNTS (FIRST_NAME, LAST_NAME, USERNAME, ADDRESS, ADDRESS_TWO, CITY, STATE, ZIP, EMAIL) VALUES ($first_name, $last_name,
-$username, $email, $address, $address_two, $city, $state, $zip)';
-
-function insertSQL()
-{
-    // use mysqli functions here //
-}
-
-function insertSQLTwo()
-{
-    // use mysqli functions here //
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
 }
 
 if (isset($_POST['submit'])) {
 
     if (!empty($_POST['first_name'])) {
-        $first_name = htmlspecialchars($_POST['first_name']);
+        $first_name = mysqli_real_escape_string($connection, $_POST['first_name']);
     }
 
     if (!empty($_POST['last_name'])) {
-        $last_name = htmlspecialchars($_POST['last_name']);
+        $last_name = mysqli_real_escape_string($connection, $_POST['last_name']);
     }
 
     if (!empty($_POST['username'])) {
-        $username = htmlspecialchars($_POST['username']);
+        $username = mysqli_real_escape_string($connection, $_POST['username']);
     }
 
     if (!empty($_POST['email'])) {
-        $email = htmlspecialchars($_POST['email']);
+        $email = mysqli_real_escape_string($connection, $_POST['email']);
     }
 
     if (!empty($_POST['address'])) {
-        $address = htmlspecialchars($_POST['address']);
+        $address = mysqli_real_escape_string($connection, $_POST['address']);
     }
 
     if (!empty($_POST['address_two'])) {
-        $address_two = htmlspecialchars($_POST['address_two']);
+        $address_two = mysqli_real_escape_string($connection, $_POST['address_two']);
     }
 
     if (!empty($_POST['state'])) {
-        $state = htmlspecialchars($_POST['state']);
+        $state = mysqli_real_escape_string($connection, $_POST['state']);
     }
 
     if (!empty($_POST['city'])) {
-        $city = htmlspecialchars($_POST['city']);
+        $city = mysqli_real_escape_string($connection, $_POST['city']);
     }
 
     if (!empty($_POST['zip'])) {
-        $zip = htmlspecialchars($_POST['zip']);
+        $zip = mysqli_real_escape_string($connection, $_POST['zip']);
+    }
+
+    $query = "INSERT INTO ACCOUNTS (first_name, last_name, username, email, address, city, state, zip) VALUES ('$first_name', '$last_name', '$username', '$email', '$address', '$city', '$state', '$zip')";
+
+    if (mysqli_query($connection, $query)) {
+        echo $zip;
+    } else {
+        echo "dog";
     }
 }
 
@@ -82,7 +73,7 @@ if (isset($_POST['submit'])) {
 
 <body class="bg-light">
 
-<form action="library.php" method="POST">
+<form action="sign_up.php" method="POST">
     <div class="container">
         <div class="py-5 text-center">
             <h2>Create Account</h2>
@@ -288,12 +279,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">
-                    Continue <?php if ($address_two == '') {
-                        insertSQL();
-                    } else {
-                        insertSQLTwo();
-                    } ?></button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">Continue</button>
             </form>
         </div>
     </div>
