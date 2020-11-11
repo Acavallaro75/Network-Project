@@ -52,9 +52,9 @@ if (isset($_POST['submit'])) {
     $query = "INSERT INTO ACCOUNTS (first_name, last_name, username, email, address, city, state, zip) VALUES ('$first_name', '$last_name', '$username', '$email', '$address', '$city', '$state', '$zip')";
 
     if (mysqli_query($connection, $query)) {
-        echo $zip;
+        header('location: library.php');
     } else {
-        echo "dog";
+        // echo mysqli_error();
     }
 }
 
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
 
 <body class="bg-light">
 
-<form action="sign_up.php" method="POST">
+<form method="POST">
     <div class="container">
         <div class="py-5 text-center">
             <h2>Create Account</h2>

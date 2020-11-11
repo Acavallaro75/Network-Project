@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="188ec8a6-3eec-4761-9ce8-b4eafb7798cb" name="Default Changelist" comment="">
+    <list default="true" id="188ec8a6-3eec-4761-9ce8-b4eafb7798cb" name="Default Changelist" comment="Removed database">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/sign_up.php" afterDir="false" />
     </list>
@@ -44,7 +46,7 @@
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/books" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -53,8 +55,8 @@
       <recent name="C:\Users\acava\PhpstormProjects\Network-Project" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\acava\PhpstormProjects\Network-Project" />
       <recent name="C:\Users\acava\PhpstormProjects\Network-Project\books" />
+      <recent name="C:\Users\acava\PhpstormProjects\Network-Project" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,8 +69,18 @@
       <updated>1605021010365</updated>
       <workItem from="1605021011542" duration="992000" />
       <workItem from="1605024244327" duration="6258000" />
-      <workItem from="1605043907655" duration="5097000" />
+      <workItem from="1605043907655" duration="5397000" />
+      <workItem from="1605049855875" duration="1954000" />
+      <workItem from="1605054064190" duration="1064000" />
     </task>
+    <task id="LOCAL-00001" summary="Removed database">
+      <created>1605049530592</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605049530592</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +97,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Removed database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="351" y="68" key="#CLI_Interpreters" timestamp="1605021303926">
@@ -124,10 +140,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1024" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605031218398" />
-    <state x="362" y="142" key="Vcs.Push.Dialog.v2" timestamp="1605032318706">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1114" y="619" key="NewPhpFileDialog" timestamp="1605050827499">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1114" y="619" key="NewPhpFileDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1605050827499" />
+    <state x="603" y="241" key="Vcs.Push.Dialog.v2" timestamp="1605049610475">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="362" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605032318706" />
+    <state x="603" y="241" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1605049610475" />
     <state x="599" y="92" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605030608605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
