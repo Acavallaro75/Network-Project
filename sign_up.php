@@ -14,47 +14,50 @@ if ($connection->connect_error) {
 if (isset($_POST['submit'])) {
 
     if (!empty($_POST['first_name'])) {
-        $first_name = mysqli_real_escape_string($connection, $_POST['first_name']);
+        $first_name = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['first_name']));
     }
 
     if (!empty($_POST['last_name'])) {
-        $last_name = mysqli_real_escape_string($connection, $_POST['last_name']);
+        $last_name = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['last_name']));
     }
 
     if (!empty($_POST['username'])) {
-        $username = mysqli_real_escape_string($connection, $_POST['username']);
+        $username = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['username']));
     }
 
     if (!empty($_POST['email'])) {
-        $email = mysqli_real_escape_string($connection, $_POST['email']);
+        $email = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['email']));
     }
 
     if (!empty($_POST['address'])) {
-        $address = mysqli_real_escape_string($connection, $_POST['address']);
+        $address = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['address']));
     }
 
     if (!empty($_POST['address_two'])) {
-        $address_two = mysqli_real_escape_string($connection, $_POST['address_two']);
+        $address_two = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['address_two']));
     }
 
     if (!empty($_POST['state'])) {
-        $state = mysqli_real_escape_string($connection, $_POST['state']);
+        $state = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['state']));
     }
 
     if (!empty($_POST['city'])) {
-        $city = mysqli_real_escape_string($connection, $_POST['city']);
+        $city = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['city']));
     }
 
     if (!empty($_POST['zip'])) {
-        $zip = mysqli_real_escape_string($connection, $_POST['zip']);
+        $zip = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['zip']));
     }
 
     $query = "INSERT INTO ACCOUNTS (first_name, last_name, username, email, address, city, state, zip) VALUES ('$first_name', '$last_name', '$username', '$email', '$address', '$city', '$state', '$zip')";
 
+    setcookie("username", $username, time() + 3600 * 24);
+    setcookie("email", $email, time() + 3600 * 24);
+
     if (mysqli_query($connection, $query)) {
         header('location: library.php');
     } else {
-        // echo mysqli_error();
+        echo "Connection error: " . mysqli_connect_error();
     }
 }
 
