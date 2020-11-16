@@ -27,8 +27,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle"
-                         width="150">
+                    <img src="./images/user.png" alt="Admin" width="860">
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                         <input type="file" name="file"/>
@@ -42,7 +41,7 @@
                     </h1>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" role="tab"
                                aria-controls="home" aria-selected="true">About</a>
                         </li>
                     </ul>
