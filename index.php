@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="./profile.css">
     <link rel="stylesheet" href="./core.css">
     <title>Welcome</title>
 </head>
 
 <body class="bg-light">
 
-
-<div class="container">
+<div class="album py-5 bg-light container emp-profile">
     <div class="py-5 text-center">
         <form action="library.php" method="POST">
             <h2>Sign In</h2>
@@ -51,13 +51,6 @@
     </form?>
 </div>
 
-<footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2020 - PDF Library</p>
-</footer>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
 

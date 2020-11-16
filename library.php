@@ -6,22 +6,27 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <link rel="stylesheet" href="./core.css">
-
     <link rel="stylesheet" href="./library.css">
-    <title>PDF Library</title>
+    <link rel="stylesheet" href="./profile.css">
+    <title>Library</title>
 </head>
-<body>
-<header>
 
+<body>
+
+<header>
     <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
             <a href="./library.php" class="navbar-brand d-flex align-items-center">
-                <strong>PDF Library</strong>
+                <strong>Library</strong>
+            </a>
+            <a href="./profile.php" class="navbar-brand d-flex align-items-center">
+                <strong>Profile</strong>
             </a>
         </div>
     </div>
 </header>
-<div class="album py-5 bg-light">
+
+<div class="album py-5 bg-light container emp-profile">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -194,16 +199,5 @@
     </div>
 </div>
 
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p style="text-align: center;">PDF Library &copy; 2020</p>
-    </div>
-</footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

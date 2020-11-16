@@ -13,6 +13,8 @@ if ($connection->connect_error) {
 
 if (isset($_POST['submit'])) {
 
+    $address_two = " ";
+
     if (!empty($_POST['first_name'])) {
         $first_name = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['first_name']));
     }
@@ -23,6 +25,10 @@ if (isset($_POST['submit'])) {
 
     if (!empty($_POST['username'])) {
         $username = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['username']));
+    }
+
+    if (!empty($_POST['password'])) {
+        $password = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['password']));
     }
 
     if (!empty($_POST['email'])) {
@@ -49,10 +55,17 @@ if (isset($_POST['submit'])) {
         $zip = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['zip']));
     }
 
-    $query = "INSERT INTO ACCOUNTS (first_name, last_name, username, email, address, city, state, zip) VALUES ('$first_name', '$last_name', '$username', '$email', '$address', '$city', '$state', '$zip')";
+    $query = "INSERT INTO ACCOUNTS (first_name, last_name, username, password, email, address, city, state, zip) VALUES ('$first_name', '$last_name', '$username', '$password', '$email', '$address', '$city', '$state', '$zip')";
 
+    setcookie("first_name", $first_name, time() + 3600 * 24);
+    setcookie("last_name", $last_name, time() + 3600 * 24);
     setcookie("username", $username, time() + 3600 * 24);
     setcookie("email", $email, time() + 3600 * 24);
+    setcookie("address", $address, time() + 3600 * 24);
+    setcookie("address_two", $address_two, time() + 3600 * 24);
+    setcookie("city", $city, time() + 3600 * 24);
+    setcookie("state", $state, time() + 3600 * 24);
+    setcookie("zip", $zip, time() + 3600 * 24);
 
     if (mysqli_query($connection, $query)) {
         header('location: library.php');
@@ -70,6 +83,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="./profile.css">
     <link rel="stylesheet" href="./core.css">
     <title>Sign Up</title>
 </head>
@@ -77,7 +91,7 @@ if (isset($_POST['submit'])) {
 <body class="bg-light">
 
 <form method="POST">
-    <div class="container">
+    <div class="album py-5 bg-light container emp-profile">
         <div class="py-5 text-center">
             <h2>Create Account</h2>
             <p class="lead">Creating an account allows for us to better personalize an experience for you, the user.</p>
@@ -114,6 +128,17 @@ if (isset($_POST['submit'])) {
                         <input type="text" class="form-control" name="username" placeholder="username" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Your username is required.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" name="password" placeholder="password" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your password is required.
                         </div>
                     </div>
                 </div>
@@ -288,11 +313,5 @@ if (isset($_POST['submit'])) {
     </div>
 </form>
 
-<footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2020 - PDF Library</p>
-</footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
