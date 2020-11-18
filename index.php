@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--Head-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,10 +11,14 @@
     <link rel="stylesheet" href="./core.css">
     <title>Welcome</title>
 </head>
+<!--End of head-->
 
+<!--Body-->
 <body class="bg-light">
 
 <div class="album py-5 bg-light container emp-profile">
+
+    <!--Sign In Form -->
     <div class="py-5 text-center">
         <form action="library.php" method="POST">
             <h2>Sign In</h2>
@@ -40,17 +46,23 @@
                     Valid password is required.
                 </div>
             </div>
+        </form>
     </div>
+    <!--End of Sign In Form -->
 
+    <!--Sign Up Form-->
     <hr class="mb-4">
     <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">Sign In</button>
     <form>
         <hr class="mb-4">
-        <p class="lead" style="text-align: center">Haven't signed up yet? Hit sign up now to create and account</p>
+        <p class="lead" style="text-align: center">Haven't signed up yet? Hit sign up now to create an account</p>
         <button class="btn btn-lg btn-block" name="signUp" onclick="location='./sign_up.php'">Sign up</button>
     </form?>
+            <!--End of Sign Up Form-->
 </div>
 
 </body>
+<!--End of Body-->
+
 </html>
 

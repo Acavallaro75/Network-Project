@@ -1,20 +1,29 @@
 <?PHP
 
+// Connection to database variables //
 $server = "localhost";
 $username = "andrew";
 $password = "networkproject";
 $database = "users";
 
+// Connecting to the database //
 $connection = mysqli_connect($server, $username, $password, $database);
 
+// Checking for database errors //
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
+// Checking for POST data from the browser //
 if (isset($_POST['submit'])) {
 
+    // Address two variable for apartments and suite numbers //
     $address_two = " ";
 
+    /* Checking for variables in POST method; if field is not empty, assign a value
+     * HTML Special Chars is used to protect against XSS (Cross Site Scripting)
+     * Prepares the strings for entry to the database
+     */
     if (!empty($_POST['first_name'])) {
         $first_name = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['first_name']));
     }
@@ -54,9 +63,12 @@ if (isset($_POST['submit'])) {
     if (!empty($_POST['zip'])) {
         $zip = htmlspecialchars(mysqli_real_escape_string($connection, $_POST['zip']));
     }
+    // End of checking for variables in POST and assigning variables values //
 
+    // SQL query to enter to the database //
     $query = "INSERT INTO ACCOUNTS (first_name, last_name, username, password, email, address, city, state, zip) VALUES ('$first_name', '$last_name', '$username', '$password', '$email', '$address', '$city', '$state', '$zip')";
 
+    // Using cookies to track user information for 24 hours //
     setcookie("first_name", $first_name, time() + 3600 * 24);
     setcookie("last_name", $last_name, time() + 3600 * 24);
     setcookie("username", $username, time() + 3600 * 24);
@@ -66,18 +78,24 @@ if (isset($_POST['submit'])) {
     setcookie("city", $city, time() + 3600 * 24);
     setcookie("state", $state, time() + 3600 * 24);
     setcookie("zip", $zip, time() + 3600 * 24);
+    // End of using cookies to track user information for 24 hours //
 
+    // If successful query to the database, go to library page; otherwise, throw an error //
     if (mysqli_query($connection, $query)) {
         header('location: library.php');
     } else {
         echo "Connection error: " . mysqli_connect_error();
     }
+    // End of checking for SQL error //
 }
+// End of checking for POST data from the browser //
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
+<!--Head-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -87,12 +105,17 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="./core.css">
     <title>Sign Up</title>
 </head>
+<!--End of Head-->
 
+<!--Body-->
 <body class="bg-light">
 
+<!--Create an account form-->
 <form method="POST">
     <div class="album py-5 bg-light container emp-profile">
         <div class="py-5 text-center">
+
+            <!--Header-->
             <h2>Create Account</h2>
             <p class="lead">Creating an account allows for us to better personalize an experience for you, the user.</p>
         </div>
@@ -101,6 +124,7 @@ if (isset($_POST['submit'])) {
             <h4 class="mb-3">Contact Info</h4>
             <form class="needs-validation" novalidate>
 
+                <!--First Name-->
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">First name</label>
@@ -109,7 +133,9 @@ if (isset($_POST['submit'])) {
                             Valid first name is required.
                         </div>
                     </div>
+                    <!--End of first name-->
 
+                    <!--Last Name-->
                     <div class="col-md-6 mb-3">
                         <label for="lastName">Last name</label>
                         <input type="text" class="form-control" name="last_name" required>
@@ -118,7 +144,9 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
+                <!--End of last name-->
 
+                <!--Username-->
                 <div class="mb-3">
                     <label for="username">Username</label>
                     <div class="input-group">
@@ -131,7 +159,9 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
+                <!--End of username-->
 
+                <!--Password-->
                 <div class="mb-3">
                     <label for="password">Password</label>
                     <div class="input-group">
@@ -142,7 +172,9 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
+                <!--End of password-->
 
+                <!--Email-->
                 <div class="mb-3">
                     <label for="email">Email <span class="text-muted"></span></label>
                     <input type="text" class="form-control" name="email" placeholder="you@example.com" required>
@@ -150,7 +182,9 @@ if (isset($_POST['submit'])) {
                         Please enter a valid email address.
                     </div>
                 </div>
+                <!--End of email-->
 
+                <!--Address-->
                 <div class="mb-3">
                     <label for="address">Address</label>
                     <input type="text" class="form-control" name="address" placeholder="1234 Main St" required>
@@ -159,11 +193,14 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
 
+                <!--Address continued-->
                 <div class="mb-3">
                     <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
                     <input type="text" class="form-control" name="address_two" placeholder="Apartment or suite">
                 </div>
+                <!--End of address continued-->
 
+                <!--City-->
                 <div class="row">
                     <div class="col-md-5 mb-3">
                         <label for="city">City</label>
@@ -172,7 +209,9 @@ if (isset($_POST['submit'])) {
                             Valid city is required.
                         </div>
                     </div>
+                    <!--End of city-->
 
+                    <!--State-->
                     <div class="col-md-4 mb-3">
                         <label for="state">State</label>
                         <select name="state" class="custom-select d-block w-100" required>
@@ -232,7 +271,9 @@ if (isset($_POST['submit'])) {
                             Please provide a valid state.
                         </div>
                     </div>
+                    <!--End of state-->
 
+                    <!--Zip-->
                     <div class="col-md-3 mb-3">
                         <label for="zip">Zip</label>
                         <input type="text" class="form-control" name="zip" required>
@@ -240,39 +281,54 @@ if (isset($_POST['submit'])) {
                             Zip code required.
                         </div>
                     </div>
+                    <!--End of zip-->
                 </div>
+                <!--End of create an account-->
 
+                <!--Checkboxes-->
                 <hr class="mb-4">
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="same-address">
+                    <input type="checkbox" class="custom-control-input" id="same-address" checked>
                     <label class="custom-control-label" for="same-address">Shipping address is the same as my billing
                         address</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="save-info">
+                    <input type="checkbox" class="custom-control-input" id="save-info" checked>
                     <label class="custom-control-label" for="save-info">Save this information for next time</label>
                 </div>
                 <hr class="mb-4">
+                <!--End of checkboxes-->
 
+                <!--Donate Section-->
                 <h4 class="mb-3">Donate <span class="text-muted">(Optional)</span></h4>
 
+                <!--Credit Card-->
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
                         <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
                                required>
                         <label class="custom-control-label" for="credit">Credit card</label>
                     </div>
+                    <!--End of credit card-->
+
+                    <!--Debit Card-->
                     <div class="custom-control custom-radio">
                         <input id="debit" name="paymentMethod" type="radio" class="custom-control-input">
                         <label class="custom-control-label" for="debit">Debit card</label>
                     </div>
                 </div>
+                <!--End of debit card-->
+
+                <!--Amount-->
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <label for="cc-name">Amount</label>
                         <input type="text" class="form-control" id="cc-name" placeholder="">
                     </div>
                 </div>
+                <!--End of amount-->
+
+                <!--Name-->
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="cc-name">Name on card</label>
@@ -282,6 +338,9 @@ if (isset($_POST['submit'])) {
                             Name on card is required
                         </div>
                     </div>
+                    <!--End of name-->
+
+                    <!--Credit Card Number-->
                     <div class="col-md-6 mb-3">
                         <label for="cc-number">Credit card number</label>
                         <input type="text" class="form-control" id="cc-number" placeholder="">
@@ -290,6 +349,9 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
+                <!--End of credit card number-->
+
+                <!--Expiration-->
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <label for="cc-expiration">Expiration</label>
@@ -298,6 +360,9 @@ if (isset($_POST['submit'])) {
                             Expiration date required
                         </div>
                     </div>
+                    <!--End of expiration-->
+
+                    <!--CVV-->
                     <div class="col-md-3 mb-3">
                         <label for="cc-expiration">CVV</label>
                         <input type="text" class="form-control" id="cc-cvv" placeholder="">
@@ -306,12 +371,18 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
                 </div>
+                <!--End of CVV-->
+
+                <!--Continue button-->
                 <hr class="mb-4">
                 <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit">Continue</button>
+                <!--End of continue button-->
             </form>
         </div>
     </div>
 </form>
+<!--End of form-->
 
 </body>
+<!--End of body-->
 </html>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--Head-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,9 +11,12 @@
     <link rel="stylesheet" href="./profile.css">
     <title>Profile</title>
 </head>
+<!--End of head-->
 
+<!--Body-->
 <body>
 
+<!--Header-->
 <header>
     <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
@@ -21,7 +26,9 @@
         </div>
     </div>
 </header>
+<!--End of header-->
 
+<!-- Using PHP cookies to enter data into appropriate fields-->
 <div class="container emp-profile">
     <form method="POST">
         <div class="row">
