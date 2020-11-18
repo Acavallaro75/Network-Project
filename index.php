@@ -46,7 +46,6 @@
                     Valid password is required.
                 </div>
             </div>
-        </form>
     </div>
     <!--End of Sign In Form -->
 
