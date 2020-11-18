@@ -166,7 +166,7 @@ if (isset($_POST['submit'])) {
                     <label for="password">Password</label>
                     <div class="input-group">
 
-                        <input type="text" class="form-control" name="password" placeholder="password" required>
+                        <input type="password" class="form-control" name="password" placeholder="password" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Your password is required.
                         </div>
